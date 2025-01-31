@@ -17,7 +17,8 @@ def calculate_totals(df):
     total_registered = df["registered"].sum()
     return total_casual, total_registered
 
-day_df = pd.read_csv("day_df.csv")
+file_path = "dashboard/day_df.csv"
+day_df = pd.read_csv(file_path)
 day_df["dteday"] = pd.to_datetime(day_df["dteday"])
 
 min_date = day_df["dteday"].min()
